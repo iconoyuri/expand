@@ -1,0 +1,140 @@
+:root {
+	--transparent-white: #fff6;
+	--white: #fff;
+	--medium-size: 3rem;
+	--small-size: 1.8rem;
+    --tiniest-size: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.grey {
+	color: var(--transparent-white);
+}
+.white {
+	color: var(--white);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	/* min-height: 100vh; */
+	height: calc(100vh + 5000px);
+}
+
+.first-x {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.expand,
+.reality,
+.unknown {
+	font-size: var(--medium-size);
+}
+
+.expand {
+	display: flex;
+	position: fixed;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--white);
+}
+
+.expand > *,
+.expand::before,
+.expand::after {
+	opacity: 0;
+	color: var(--transparent-white);
+}
+
+.expand .x {
+	color: var(--white);
+}
+
+.expand::before {
+	content: 'e';
+}
+.expand::after {
+	content: 'pand';
+}
+
+.reality {
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+.reality .grey {
+	color: var(--transparent-white);
+}
+.reality .white {
+	color: var(--white);
+}
+
+.unknown {
+	z-index: 1;
+	position: fixed;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%);
+}
+.unknown p {
+	margin-bottom: 8rem;
+}
+
+.unknown .join-btn {
+	margin: 0 auto;
+	display: block;
+	background-color: transparent;
+	border: 1px solid var(--white);
+	padding: 0.5rem 1.5rem;
+	border-radius: 5rem;
+	color: var(--white);
+	font-size: var(--small-size);
+	transition: background-color 0.3s;
+}
+
+.unknown .join-btn:hover {
+	background-color: #fff2;
+}
+.unknown .join-btn:active {
+	background-color: #fff4;
+}
+
+footer{
+    z-index: 1;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: var(--tiniest-size);
+    flex-wrap: nowrap;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: var(--white);
+    width: 100%;
+    transform: translateY(100%);
+}
+
+footer .addresses{
+    flex-shrink: 0;
+    display: flex;
+    gap: 1rem
+}
+address{
+    display: block;
+}
